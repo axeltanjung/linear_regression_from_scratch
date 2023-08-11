@@ -64,7 +64,7 @@ class Ridge(LinearRegression):
         X = np.array(X).copy()
         y = np.array(y).copy()
 
-        # Extract size
+        # Extract size from n_samples dan n_features
         n_samples, n_features = X.shape
 
         # Create the design matrix, A
