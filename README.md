@@ -6,15 +6,25 @@ Pada dasarnya, Linear Regression mencoba untuk menemukan garis lurus (dalam kasu
 
 Berikut adalah beberapa konsep penting terkait Linear Regression:
 
-Variabel Independen dan Dependen: Variabel independen (input) adalah variabel yang digunakan untuk memprediksi nilai variabel dependen (output). Misalnya, dalam prediksi harga rumah, variabel independen bisa berupa luas tanah, jumlah kamar, dll., sementara harga rumah menjadi variabel dependen.
+1. Variabel Independen dan Dependen: 
 
-Garis Regresi: Dalam regresi satu variabel, garis regresi adalah garis lurus yang mencoba menyesuaikan data sedemikian rupa sehingga selisih antara nilai yang diprediksi oleh garis dan nilai sebenarnya dari data di minimalkan. Dalam regresi lebih dari satu variabel, kita menggunakan hyperplane sebagai generalisasi dari garis.
+Variabel independen (input) adalah variabel yang digunakan untuk memprediksi nilai variabel dependen (output). Misalnya, dalam prediksi harga rumah, variabel independen bisa berupa luas tanah, jumlah kamar, dll., sementara harga rumah menjadi variabel dependen.
 
-Konsep Least Squares: Pendekatan yang umum digunakan dalam Linear Regression adalah Least Squares. Ini berarti kita mencari garis atau hyperplane yang menghasilkan jumlah kuadrat terkecil dari selisih antara nilai yang diprediksi dan nilai sebenarnya dari data pelatihan.
+2. Garis Regresi: 
 
-Koefisien Regresi: Dalam regresi linear, koefisien (slope) dari garis regresi menggambarkan perubahan rata-rata dalam variabel dependen untuk setiap perubahan satu unit dalam variabel independen. Koefisien intercept mengindikasikan nilai variabel dependen ketika variabel independen nol.
+Dalam regresi satu variabel, garis regresi adalah garis lurus yang mencoba menyesuaikan data sedemikian rupa sehingga selisih antara nilai yang diprediksi oleh garis dan nilai sebenarnya dari data di minimalkan. Dalam regresi lebih dari satu variabel, kita menggunakan hyperplane sebagai generalisasi dari garis.
 
-Evaluasi Model: Evaluasi model Linear Regression melibatkan analisis residu (selisih antara nilai sebenarnya dan nilai yang diprediksi). Metrik evaluasi yang umum digunakan termasuk Mean Squared Error (MSE), Root Mean Squared Error (RMSE), dan R-squared (koefisien determinasi).
+3. Konsep Least Squares: 
+
+Pendekatan yang umum digunakan dalam Linear Regression adalah Least Squares. Ini berarti kita mencari garis atau hyperplane yang menghasilkan jumlah kuadrat terkecil dari selisih antara nilai yang diprediksi dan nilai sebenarnya dari data pelatihan.
+
+4. Koefisien Regresi: 
+
+Dalam regresi linear, koefisien (slope) dari garis regresi menggambarkan perubahan rata-rata dalam variabel dependen untuk setiap perubahan satu unit dalam variabel independen. Koefisien intercept mengindikasikan nilai variabel dependen ketika variabel independen nol.
+
+5. Evaluasi Model: 
+
+Evaluasi model Linear Regression melibatkan analisis residu (selisih antara nilai sebenarnya dan nilai yang diprediksi). Metrik evaluasi yang umum digunakan termasuk Mean Squared Error (MSE), Root Mean Squared Error (RMSE), dan R-squared (koefisien determinasi).
 
 Membangun Linear Regression dari awal melibatkan menghitung koefisien regresi dan intercept secara matematis dengan meminimalkan fungsi biaya (seperti MSE) menggunakan teknik optimasi seperti metode gradien turun. Namun, dalam implementasi nyata, library atau framework pembelajaran mesin seperti scikit-learn atau TensorFlow sering digunakan untuk menghemat waktu dan usaha.
 
@@ -24,28 +34,50 @@ Pemahaman tentang Linear Regression penting karena memberikan dasar yang kuat un
 
 #### Kelebihan Linear Regression:
 
-1. Sederhana dan Interpretatif: Linear regression adalah model yang relatif sederhana dan mudah diinterpretasikan. Koefisien dalam model dapat memberikan wawasan tentang hubungan antara variabel input dan output.
+1. Sederhana dan Interpretatif: 
 
-2. Penggunaan Luas: Linear regression dapat digunakan dalam berbagai konteks, baik untuk analisis prediktif maupun pemahaman hubungan antar variabel.
+Linear regression adalah model yang relatif sederhana dan mudah diinterpretasikan. Koefisien dalam model dapat memberikan wawasan tentang hubungan antara variabel input dan output.
 
-3. Stabilitas: Linear regression cenderung stabil dan memiliki risiko overfitting yang lebih rendah dibandingkan dengan model yang lebih kompleks.
+2. Penggunaan Luas: 
 
-4. Deteksi Outlier: Outlier dapat terdeteksi dengan mudah dalam linear regression melalui analisis residual.
+Linear regression dapat digunakan dalam berbagai konteks, baik untuk analisis prediktif maupun pemahaman hubungan antar variabel.
 
-5. Penghitungan Efisien: Perhitungan koefisien dalam linear regression memiliki solusi matematis tertutup (closed-form solution), yang memungkinkan perhitungan yang relatif efisien.
+3. Stabilitas: 
+
+Linear regression cenderung stabil dan memiliki risiko overfitting yang lebih rendah dibandingkan dengan model yang lebih kompleks.
+
+4. Deteksi Outlier: 
+
+Outlier dapat terdeteksi dengan mudah dalam linear regression melalui analisis residual.
+
+5. Penghitungan Efisien: 
+
+Perhitungan koefisien dalam linear regression memiliki solusi matematis tertutup (closed-form solution), yang memungkinkan perhitungan yang relatif efisien.
 
 #### Kelemahan Linear Regression:
 
-1. Asumsi Linieritas: Linear regression hanya efektif jika hubungan antara variabel independen dan dependen bersifat linier. Jika hubungan bersifat non-linier, hasil prediksi dapat menjadi tidak akurat.
+1. Asumsi Linieritas: 
 
-2. Sensitif terhadap Outlier: Meskipun dapat mendeteksi outlier, outlier yang signifikan dapat memiliki pengaruh besar pada hasil model linear regression.
+Linear regression hanya efektif jika hubungan antara variabel independen dan dependen bersifat linier. Jika hubungan bersifat non-linier, hasil prediksi dapat menjadi tidak akurat.
 
-3. Asumsi Kemandirian Variabel: Model ini mengasumsikan bahwa variabel input adalah mandiri satu sama lain. Jika ada korelasi atau interaksi antara variabel, model ini mungkin tidak akurat.
+2. Sensitif terhadap Outlier: 
 
-4. Heteroskedastisitas: Model ini mengasumsikan homoskedastisitas, yaitu variasi residual konstan. Jika variasi residual tidak konstan (heteroskedastisitas), hasil prediksi dan interval kepercayaan menjadi tidak akurat.
+Meskipun dapat mendeteksi outlier, outlier yang signifikan dapat memiliki pengaruh besar pada hasil model linear regression.
 
-5. Overfitting Kecil: Linear regression cenderung memiliki kemampuan prediksi yang lebih rendah jika pola yang kompleks ada dalam data. Ini dapat menghasilkan hasil yang kurang akurat dalam situasi seperti itu.
+3. Asumsi Kemandirian Variabel: 
 
-6. Terbatas pada Masalah Regresi: Linear regression hanya cocok untuk masalah regresi, yaitu ketika kita mencoba memprediksi nilai numerik. Ini tidak cocok untuk masalah klasifikasi di mana output adalah kategori diskrit.
+Model ini mengasumsikan bahwa variabel input adalah mandiri satu sama lain. Jika ada korelasi atau interaksi antara variabel, model ini mungkin tidak akurat.
+
+4. Heteroskedastisitas: 
+
+Model ini mengasumsikan homoskedastisitas, yaitu variasi residual konstan. Jika variasi residual tidak konstan (heteroskedastisitas), hasil prediksi dan interval kepercayaan menjadi tidak akurat.
+
+5. Overfitting Kecil: 
+
+Linear regression cenderung memiliki kemampuan prediksi yang lebih rendah jika pola yang kompleks ada dalam data. Ini dapat menghasilkan hasil yang kurang akurat dalam situasi seperti itu.
+
+6. Terbatas pada Masalah Regresi: 
+
+Linear regression hanya cocok untuk masalah regresi, yaitu ketika kita mencoba memprediksi nilai numerik. Ini tidak cocok untuk masalah klasifikasi di mana output adalah kategori diskrit.
 
 Secara keseluruhan, linear regression adalah model yang kuat dan sederhana, tetapi keefektifannya tergantung pada sejauh mana asumsi-asumsi yang mendasarinya terpenuhi dalam data yang digunakan. Jika asumsi-asumsi ini tidak terpenuhi, model yang lebih kompleks atau teknik lain mungkin lebih cocok.
