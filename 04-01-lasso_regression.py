@@ -9,6 +9,6 @@ y = np.array([1,2,3])
 clf = Lasso(alpha=0.1)
 clf.fit(X, y)
 
-# Mencari nilai koefisien (coef) dan intercept
+# Mencari nilai koefisien (coef) dan intercept.
 print(clf.coef_)
 print(clf.intercept_)
